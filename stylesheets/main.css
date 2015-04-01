@@ -1,0 +1,238 @@
+/* line 1, ../sass/partials/_typography.scss */
+body, html {
+  color: #e3e4e5;
+  font-size: 21px;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
+}
+
+/* line 8, ../sass/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arvo", Georgia, Times, serif;
+  line-height: 1.75em;
+}
+/* line 11, ../sass/partials/_typography.scss */
+h1 .subheader, h2 .subheader, h3 .subheader, h4 .subheader, h5 .subheader, h6 .subheader {
+  color: #e13739;
+}
+
+/* line 16, ../sass/partials/_typography.scss */
+h1 {
+  font-size: 60px;
+}
+
+/* line 17, ../sass/partials/_typography.scss */
+h2 {
+  font-size: 48px;
+}
+
+/* line 18, ../sass/partials/_typography.scss */
+h3 {
+  font-size: 36px;
+}
+
+/* line 19, ../sass/partials/_typography.scss */
+h4 {
+  font-size: 24px;
+}
+
+/* line 20, ../sass/partials/_typography.scss */
+h5 {
+  font-size: 21px;
+}
+
+/* line 21, ../sass/partials/_typography.scss */
+h6 {
+  font-size: 21px;
+}
+
+/* line 22, ../sass/partials/_typography.scss */
+.title {
+  font-size: 72px;
+}
+
+/* line 24, ../sass/partials/_typography.scss */
+.center {
+  text-align: center;
+}
+
+/* line 1, ../sass/partials/_buttons.scss */
+.button {
+  padding: 1em 2em;
+  font-size: 21px;
+  line-height: 100%;
+  color: #e3e4e5;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.1s ease-in-out;
+  -webkit-transition: background 0.1s ease-in-out;
+  -moz-transition: background 0.1s ease-in-out;
+  -ms-transition: background 0.1s ease-in-out;
+  -o-transition: background 0.1s ease-in-out;
+  color: #e3e4e5;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  -webkit-border-radius: .3em;
+  -moz-border-radius: .3em;
+  border-radius: .3em;
+}
+/* line 25, ../sass/partials/_buttons.scss */
+.button:active {
+  padding-top: 1em;
+}
+
+/* line 28, ../sass/partials/_buttons.scss */
+.rounded {
+  -webkit-border-radius: 40px !important;
+  -moz-border-radius: 40px !important;
+  border-radius: 40px !important;
+}
+
+/* line 33, ../sass/partials/_buttons.scss */
+.box {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* line 39, ../sass/partials/_buttons.scss */
+.button, .button:hover, .button:active {
+  outline: 0 none;
+  text-decoration: none;
+  color: #e3e4e5;
+}
+
+/* line 44, ../sass/partials/_buttons.scss */
+.button, .button.normal {
+  background-color: #48535a;
+  box-shadow: 0px 3px 0px 0px #1b1f21;
+}
+/* line 47, ../sass/partials/_buttons.scss */
+.button:hover, .button.normal:hover {
+  background-color: #31393e;
+}
+/* line 48, ../sass/partials/_buttons.scss */
+.button:active, .button.normal:active {
+  box-shadow: 0px 1px 0px 0px #1b1f21;
+}
+
+/* line 50, ../sass/partials/_buttons.scss */
+.button.alert {
+  background-color: #e13739;
+  box-shadow: 0px 3px 0px 0px #9b1719;
+}
+/* line 53, ../sass/partials/_buttons.scss */
+.button.alert:hover {
+  background-color: #c71e20;
+}
+/* line 54, ../sass/partials/_buttons.scss */
+.button.alert:active {
+  box-shadow: 0px 1px 0px 0px #9b1719;
+}
+
+/* line 56, ../sass/partials/_buttons.scss */
+.button.success {
+  background-color: #e3e4e5;
+  color: #18252d;
+  box-shadow: 0px 3px 0px 0px #aeb1b4;
+}
+/* line 60, ../sass/partials/_buttons.scss */
+.button.success:hover {
+  background-color: #c9cbcc;
+}
+/* line 61, ../sass/partials/_buttons.scss */
+.button.success:active {
+  box-shadow: 0px 1px 0px 0px #aeb1b4;
+}
+
+/* line 1, ../sass/partials/_layout.scss */
+body, html {
+  height: 100%;
+  background: #18252d;
+  margin: 0;
+}
+
+/* line 6, ../sass/partials/_layout.scss */
+div {
+  padding: 2em 12em;
+}
+
+/* line 9, ../sass/partials/_layout.scss */
+#section1 {
+  background: #152027;
+  height: 1000px;
+}
+
+/* line 13, ../sass/partials/_layout.scss */
+#section2 {
+  background: #48535a;
+  height: 1000px;
+}
+
+/* line 22, ../sass/partials/_layout.scss */
+.triangle {
+  width: 0;
+  height: 0;
+  padding: 0;
+}
+
+/* line 27, ../sass/partials/_layout.scss */
+.triangle.up {
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 50px solid black;
+}
+
+/* line 33, ../sass/partials/_layout.scss */
+.triangle.down {
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 20px solid #f00;
+}
+
+/* line 39, ../sass/partials/_layout.scss */
+.triangle.right {
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid green;
+}
+
+/* line 45, ../sass/partials/_layout.scss */
+.triangle.left {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid blue;
+}
+
+/* line 50, ../sass/partials/_layout.scss */
+.triangle.top.left {
+  border-right: 50px solid transparent;
+  border-top: 30px solid red;
+  border-left: 30px solid red;
+  border-bottom: 40px solid transparent;
+}
+
+/* line 56, ../sass/partials/_layout.scss */
+.triangle.top.right {
+  border-right: 50px solid red;
+  border-top: 50px solid red;
+  border-left: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+
+/* line 62, ../sass/partials/_layout.scss */
+.triangle.bottom.left {
+  border-right: 50px solid transparent;
+  border-top: 50px solid transparent;
+  border-left: 50px solid red;
+  border-bottom: 50px solid red;
+}
+
+/* line 68, ../sass/partials/_layout.scss */
+.triangle.bottom.right {
+  border-right: 700px solid #48535a;
+  border-top: 40px solid transparent;
+  border-left: 300px solid transparent;
+  border-bottom: 80px solid #48535a;
+}
