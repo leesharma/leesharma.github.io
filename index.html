@@ -1,41 +1,106 @@
-<html>
-  <head>
-    <!-- Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
-    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/screen.css"> -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-    <!-- jQuery -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="javascript/main.js"></script>
-  </head>
-  <body>
-    <div id="home">
-      <h1 class="title center">Hello World!</h1>
-      <a href="#" id="s1_button" class="button">Section 1</a>
-      <a href="#" id="s2_button" class="normal button">Section 2</a>
-      <a href="#" class="rounded alert button">Test Alert</a>
-      <a href="#" class="box success button">Test Success</a>
-    </div>
-    <div id="section1">
-      <h2>Lorem Ipsum</h2>
-      <img class="center" src="http://placekitten.com/g/500/300" />
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, autem, consectetur aliquam sequi nihil culpa quaerat rem ea tempore in quis atque dicta placeat iure porro aut suscipit laborum saepe!
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, dicta, vero vitae cumque rem in quasi ut autem voluptas! Ratione, aperiam, sunt quidem quibusdam eum doloremque labore. Atque, consectetur, nulla!
-      </p>    
-    </div>
+<!doctype html>
 
-    <div id="section2">
-      <h2>Nisi, Autem, Consectetur Aliquam</h2>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, aspernatur, sint, molestiae assumenda maxime est similique mollitia deleniti esse facere repudiandae animi velit necessitatibus dolorum obcaecati ducimus nulla ex praesentium.
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, quia, explicabo suscipit doloribus dolorum optio ratione excepturi modi ipsa enim aspernatur deserunt iusto repellendus veritatis facilis culpa corrupti in. Ipsa!
-      </p>
-    </div>
-  </body>
+<html>
+
+	<head>
+		<title>Lee Sharma's Homepage</title>
+		<meta charset="utf-8" />
+        <!-- Set up document -->
+        <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/simplegrid.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        
+        <!-- Customization -->
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+        <script src="javascript/main.js"></script>
+		
+<!--
+		<style>
+			.content {
+				background: #ccc;
+				padding: 10px;
+			}
+		</style>
+-->
+	</head>
+
+	<body>
+		<!-- TITLE MATTER (Grid 1/1) -->
+		<div class="grid grid-pad" id='header'>
+			<div class="col-1-1">
+				<div class="content">
+                    <img src='images/blocks.svg' class='title' />
+                    <h1 class='title'>Lee Sharma</h1>
+                    <p>Netus massa faucibus imperdiet amet nostra libero. <a href="#">Netus justo convallis pulvinar</a> montes mauris hac congue aliquet pede natoque penatibus sagittis luctus egestas. Magna nulla nunc urna consequat inceptos class id sollicitudin conubia placerat aenean. Ipsum etiam fames velit sit.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- PROJECTS (9/12 and 3/12 layout) -->
+		<div class="grid grid-pad">
+			<div class="col-3-12">
+				<div class="content">
+                    <h1>Projects</h1>
+				</div>
+			</div>
+			<div class="col-9-12">
+				<div class="content">
+                    <p>Netus massa faucibus imperdiet amet nostra libero. Netus justo convallis pulvinar montes mauris hac congue aliquet pede natoque penatibus sagittis luctus egestas. Magna nulla nunc urna consequat inceptos class id sollicitudin conubia placerat aenean. Ipsum etiam fames velit sit.</p>
+				</div>
+			</div>
+		</div>
+        
+        <!-- 9/12 and 3/12 layout -->
+		<div class="grid grid-pad">
+			<div class="col-3-12">
+				<div class="content">
+                    <h1>Blog</h1>
+				</div>
+			</div>
+			<div class="col-9-12">
+				<div class="content">
+                    <p>Netus massa faucibus imperdiet amet nostra libero. Netus justo convallis pulvinar montes mauris hac congue aliquet pede natoque penatibus sagittis luctus egestas. Magna nulla nunc urna consequat inceptos class id sollicitudin conubia placerat aenean. Ipsum etiam fames velit sit.</p>
+				</div>
+			</div>
+		</div>
+        
+        <!-- 9/12 and 3/12 layout -->
+		<div class="grid grid-pad">
+			<div class="col-3-12">
+				<div class="content">
+                    <h1>Contact</h1>
+				</div>
+			</div>
+			<div class="col-9-12">
+				<div class="content">
+                    <p>Netus massa faucibus imperdiet amet nostra libero. Netus justo convallis pulvinar montes mauris hac congue aliquet pede natoque penatibus sagittis luctus egestas. Magna nulla nunc urna consequat inceptos class id sollicitudin conubia placerat aenean. <a href="http://www.wolframalpha.com/">Ipsum</a> etiam fames velit sit.</p>
+				</div>
+			</div>
+		</div>
+        
+        
+        
+        
+        <!-- FOOTER (Grid 1/1) -->
+<!--
+		<div class="grid grid-pad" id='footer'>
+			<div class="col-9-12">
+				<div class="content">
+                    <p>Netus massa faucibus imperdiet amet nostra libero. Netus justo convallis pulvinar montes mauris hac congue aliquet pede natoque penatibus sagittis luctus egestas. Magna nulla nunc urna consequat inceptos class id sollicitudin conubia placerat aenean. Ipsum etiam fames velit sit.</p>
+				</div>
+			</div>
+            <div class="col-3-12">
+				<div class="content">
+                    <p>Netus massa faucibus imperdiet amet nostra libero. Netus justo convallis pulvinar montes mauris hac congue aliquet pede natoque penatibus sagittis luctus egestas. Magna nulla nunc urna consequat inceptos class id sollicitudin conubia placerat aenean. Ipsum etiam fames velit sit.</p>
+				</div>
+			</div>
+        </div>
+-->
+        
+	</body>
+
 </html>
