@@ -19,6 +19,13 @@ $cyan:      #2aa198;
 $green:     #859900;
 *******************/
 
+/*******************************
+| Small screen options: 
+|
+|   @media handheld, only screen 
+|   and (max-width: 767px) 
+ *******************************/
+
 
 body, html {
     color: #eee8d5;             /* $base2 */
@@ -37,13 +44,20 @@ h1, h2, h3, h4, h5, h6, title {
 }
 h1 { 
     text-align: right; 
+    /* On normal screens, right-align h1 headings */
     padding-right: 1em;
 }
+/* On small screens, center h1 headings */
+@media handheld, only screen and (max-width: 767px) {
+    h1 { text-align: center; }
+}
+
 h1.title { 
     font-size: 300%;
     color: #fdf6e3;             /* $base3 */
     text-align: center;
 }
+
 img.title {
     display: block;
     margin: 0 auto;
