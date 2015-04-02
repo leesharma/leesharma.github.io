@@ -49,6 +49,11 @@ img.title {
     margin: 0 auto;
     padding-top: 50px;
 }
+.subtitle {
+    font-size: .5em;
+    font-weight: 300;
+    color: #839496;
+}
 
 
 /* Links */
@@ -57,12 +62,20 @@ a:hover { color: #859900; }     /* $green */
 a:active { color: #d33682; }    /* $magenta */
 a:visited { color: #6c71c4; }   /* $violet */
 
+dt a { text-decoration: none; }
+dt img { max-height: .8em; padding: 0 0.5em;}
+.connect_link img { 
+    margin-top: 1em;
+    max-height: 50px; 
+    margin-right: 10px; 
+    display: inline-block;
+}
+
 
 /* Footer */
 #footer {
-    border-top-color: #586e75;  /* $base01 */
-    border-top-style: solid;
-    border-top-width: medium;
+    padding-top: 4em;
+    padding-bottom: 1em;
     color: #586e75;             /* $base01 */
     font-size: 70%;
 }
