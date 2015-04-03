@@ -53,7 +53,7 @@ from http://ethanschoonover.com/solarized
     /* On normal screens, right-align h1 headings */
     /* On small screens, center h1 headings */
     @media handheld, only screen and (max-width: 767px) {
-        h1 { text-align: center; }
+        h1:not(.title) { text-align: center; }
     }
 
     h1.title { 
