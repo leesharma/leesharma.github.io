@@ -46,7 +46,7 @@ from http://ethanschoonover.com/solarized
         font-family: "Arvo", Georgia, Times, serif; 
         color: #839496;             /* $base0 */
     }
-    h1 { 
+    h1:not(.title) { 
         text-align: right; 
         padding-right: 1em;
     }
@@ -103,4 +103,6 @@ from http://ethanschoonover.com/solarized
         color: #586e75;             /* $base01 */
         font-size: 70%;
     }
+    
+    .centered { text-align: center; }
 }
