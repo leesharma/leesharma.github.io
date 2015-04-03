@@ -29,6 +29,8 @@ from http://ethanschoonover.com/solarized
  *******************************/
 
 @media only screen {
+    .printonly { display: none; }
+    
     body, html {
         color: #eee8d5;             /* $base2 */
         font-size: 18px;
