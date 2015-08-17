@@ -1,0 +1,32 @@
+# Site settings
+title: "Lee Sharma"
+email: lee@leesharma.com
+description: "A personal homepage for Lee Sharma."
+baseurl: ""
+url: "http://leesharma.com/"
+title_description: "Hello, my name is Lee Sharma. I am a developer, student, runner, reader, traveller, and generally awesome person. If you want to talk about software or just say hi, you can contact me using one of the social media links below."
+title_image: "https://s.gravatar.com/avatar/afb4406ce3938c95df8414b178ef2b85?s=150"
+google_analytics: "UA-20365477-4"
+disqus_account: lee_sharma
+github_repository: https://github.com/leesharma
+addthis_id: ra-513c6fa83da6ec67
+post_limit: 5
+
+# Social usernames/URLs
+# twitter_username: theleesharma
+github_username:  leesharma
+# linkedin_link: http://carte-noire.jacobtomlinson.co.uk/
+# google_plus_link: http://carte-noire.jacobtomlinson.co.uk/
+stackoverflow_link: http://stackoverflow.com/users/688244/lee
+codepen_link: http://codepen.io/leesharma/
+
+# Footer
+footer_left: #"Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a>"
+footer_right: "&lt;/&gt; on <a href=\"https://github.com/leesharma/leesharma.github.io\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+permalink: pretty
+exclude: [vendor]

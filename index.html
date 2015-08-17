@@ -1,182 +1,52 @@
-<!doctype html>
+---
+layout: default
+---
 
-<html>
 
-<head>
-	<title>Lee Sharma | Personal Homepage</title>
-	<meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=767">
-    
-    <!-- FAVICONS -->
-    <link rel="apple-touch-icon-precomposed" href="/favicons/favicon-152.png">                   <!-- iOS 2.0+ and Android 2.1+: -->
-    <meta name="msapplication-TileColor" content="#002b36">                                      <!-- IE 10 Metro tile icon: -->
-    <meta name="msapplication-TileImage" content="/favicons/favicon-144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/favicon-152.png">   <!-- Retina iPad running iOS ≥ 7: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/favicon-144.png">   <!-- Retina iPad running iOS ≤ 6: -->
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/favicon-120.png">   <!-- Retina iPhone running iOS ≥ 7: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/favicon-114.png">   <!-- Retina iPhone running iOS ≤ 6: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/favicon-72.png">      <!-- 1st- and 2nd-gen iPad: -->
-    <link rel="apple-touch-icon-precomposed" href="/favicons/favicon-57.png">                    <!-- Non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="icon" href="/favicons/favicon-32.png" sizes="32x32">                              <!-- Etc.: -->
-    
-    <!-- Authorship and Site Details -->
-    <meta name="keywords" content="Lee Sharma, Ruby on Rails, software development, personal website, resume, ruby">
-    <meta name="description" content="Lee Sharma's personal website">
-    <meta name="author" content="Lee Sharma">
+<div class="container-fluid index">
+    <div class="row">
 
-	<!-- Set up document -->
-	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="stylesheets/simplegrid.css" />
+        <div class="col-md-12 main content-panel">
 
-	<!-- Customization -->
-	<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
-
-	<link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css">
-</head>
-    
-    
-    
-    
-
-<body>
-    <!-- TITLE MATTER (Grid 1/1) -->
-    <div class="grid grid-pad" id='header'>
-        <div class="col-1-1">
-            <div class="content">
-                <!-- Logo -->
-                <img src='images/blocks.svg' title='logo' description='a logo that looks like blocks falling into place' alt='logo' class='title' />
-                <!-- Main Title -->
-                <h1 class='title'>Lee Sharma</h1>
-                <!-- "About Me" blurb -->
-                <p>Netus massa faucibus imperdiet amet nostra libero. <a href="#">Netus justo convallis pulvinar</a> 
-                montes mauris hac congue aliquet pede natoque penatibus sagittis luctus egestas. Magna nulla nunc urna 
-                consequat inceptos class id sollicitudin conubia placerat aenean. Ipsum etiam fames velit sit.</p>
+            <div class="gravatar">
+                <img src="{{ site.title_image }}" class="img-circle about-image" height="150" width="150" alt="{{ site.title }}" />
             </div>
-        </div>
+
+            <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
+
+            <div class="author-text">
+                {{ site.title_description }}
+            </div>
+
+            {% include social_links.html %}
+          </div>
+
+
+	  {% if site.posts.size > 0 %}
+
+            <div class="col-md-12 main content-panel">
+	      <div class="articles">
+
+		<h2>Latest Articles</h2>
+
+		<ul>
+                    {% for post in site.posts | limit: site.post_limit %}
+
+                        <li>
+                            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                            <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
+                        </li>
+
+                    {% endfor %}
+                    <li>
+                        <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
+                    </li>
+                </ul>
+
+	      </div>
+            </div>
+
+	  {% endif %}
+
     </div>
-        
-        
-        
-        
-        <!-- CONTENT SECTIONS -->
-        
-        <!-- PROJECTS (9/12 and 3/12 layout) -->
-		<div class="grid grid-pad">
-			<div class="col-3-12">
-				<div class="content">
-                    <h1>Projects<br />
-                    <span class='subtitle'><a href="https://github.com/leesharma?tab=repositories" title="GitHub repositories">all public repos</a></span></h1>
-				</div>
-			</div>
-			<div class="col-9-12">
-				<div class="content">
-                    <dl>
-                        <dt><h4>
-                            <!-- Project Name -->
-                            <a href="http://github.com/leesharma" title="GitHub project page">
-                                Neque netus
-                            <!-- Icons -->
-                                <img src="images/GitHub-Mark-Light-32px.png" title='small github mark' description='a small image of github mark' alt='github' />
-                            </a>
-                        </h4></dt>
-                        <!-- Project Description -->
-                        <dd>Netus augue velit dictum parturient facilisi. Neque class metus lacus montes eget tortor dui.</dd>
-
-                        <dt><h4>
-                            <!-- Project Name -->
-                            <a href="http://github.com/leesharma" title="GitHub project page">
-                                Neque netus
-                            <!-- Icons -->
-                                <img src="images/GitHub-Mark-Light-32px.png" title='small github mark' description='a small image of github mark' alt='github' />
-                            </a>
-                        </h4></dt>
-                        <!-- Project Description -->
-                        <dd>Netus augue velit dictum parturient facilisi. Neque class metus lacus montes eget tortor dui.</dd>
-                    </dl>
-				</div>
-			</div>
-		</div>
-        
-    
-        <!-- ABOUT (9/12 and 3/12 layout) -->
-		<div class="grid grid-pad">
-			<div class="col-3-12">
-				<div class="content">
-                    <h1>About<br />
-                    <span class='subtitle'><a href="https://github.com/leesharma?tab=repositories" title="resume">resume</a></span><br />
-                    <span class='subtitle'><a href="https://github.com/leesharma?tab=repositories" title="personal blog">blog</a></span><br />
-                    </h1>
-				</div>
-			</div>
-			<div class="col-9-12">
-				<div class="content">
-                    <h2>Interests</h2>
-                    <p>Nulla class tellus pede sollicitudin facilisi metus. Risus morbi tempor 
-                        posuere egestas duis purus commodo malesuada duis vivamus.</p>
-                    <h2>Goals</h2>
-                    <p>Dolor magna accumsan urna aenean posuere. Proin class vivamus.</p>
-                    <h2>Experience</h2>
-                    <p>Etiam felis. Fusce velit sociis habitasse pulvinar enim iaculis mi penatibus a.</p>
-				</div>
-			</div>
-		</div>
-        
-        <!-- CONNECT (9/12 and 3/12 layout) -->
-		<div class="grid grid-pad">
-			<div class="col-3-12">
-				<div class="content">
-                    <h1>Connect</h1>
-				</div>
-			</div>
-			<div class="col-9-12">
-				<div class="content">
-                    <!-- Web-only connect buttons -->
-                    <div class="connect_buttons noprint">
-                        <a href="https://github.com/leesharma" title='GitHub profile' target="_blank" class="connect_link">
-                            <img src="images/octocat.png" title='GitHub' description='Link to my GitHub profile' alt='GitHub profile' />
-                        </a>
-                        <a href="https://www.facebook.com/lee.sharma" title="Facebook profile" target="_blank" class="connect_link">
-                            <img src="images/facebook.png" title='Facebook' description='Link to my Facebook profile' alt='Facebook profile' />
-                        </a>
-                        <a href="" target="_blank" title="LinkedIn profile" class="connect_link">
-                            <img src="images/linkedin.png" title='LinkedIn' description='Link to my LinkedIn profile' alt='LinkedIn profile' />
-                        </a>
-                    </div>
-                    
-                    <!-- Print-only site listing -->
-                    <div class="printonly">
-                        <h2>Find me Online</h2>
-                        <ul>
-                            <li><a href="http://leesharma.com" title="Personal Website">Personal Website</a></li>
-                            <li><a href="http://github.com/leesharma" title="GitHub profile">GitHub</a></li>
-                            <li><a href="http://facebook.com/lee.sharma" title="Facebook profile">Facebook</a></li>
-                            <li><a href="http://twitter.com/theleesharma" title="Twitter profile">Twitter</a></li>
-                        </ul>
-                    </div>
-				</div>
-			</div>
-		</div>
-        
-    
-        
-<!-- FOOTER (Grid 1/1) -->
-<div class="grid grid-pad" id='footer'>
-	<div class="col-1-1">
-		<div class="content">
-			<p>Copyright (c) 2015 Lee Sharma under the <a href="http://opensource.org/licenses/MIT" target="_blank">
-			MIT License</a>. Please feel free to use this code as you like.</p>
-		</div>
-	</div>
 </div>
-
-
-
-
-<!-- FORK ME ON GITHUB -->
-<!--<a class="noprint" href="https://github.com/leesharma"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>-->
-    
-</body>
-
-</html>
