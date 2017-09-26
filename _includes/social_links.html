@@ -1,9 +1,59 @@
-<p class="links">
-  {% if site.twitter_username %}<a href="http://www.twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a>{% endif %}
-  {% if site.linkedin_link %}<a href="{{ site.linkedin_link }}" target="_blank"><i class="fa fa-linkedin"></i></a>{% endif %}
-  {% if site.google_plus_link %}<a href="{{ site.google_plus_link }}" target="_blank"><i class="fa fa-google-plus"></i></a>{% endif %}
-  {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fa fa-github-alt"></i></a>{% endif %}
-  {% if site.codepen_link %}<a href="{{ site.codepen_link }}" target="_blank"><i class="fa fa-codepen"></i></a>{% endif %}
-  {% if site.stackoverflow_link %}<a href="{{ site.stackoverflow_link }}" target="_blank"><i class="fa fa-stack-overflow"></i></a>{% endif %}
-  <a href="{{ site.baseurl }}/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
-</p>
+<nav>
+  <ul>
+    {% if site.github_username %}
+      <li>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank">
+          <i class="fa fa-github-alt"></i>GitHub
+        </a>
+      </li>
+    {% endif %}
+
+    {% if site.codepen_link %}
+      <li>
+        <a href="{{ site.codepen_link }}" target="_blank">
+          <i class="fa fa-codepen"></i>CodePen
+        </a>
+      </li>
+    {% endif %}
+
+    {% if site.stackoverflow_link %}
+      <li>
+        <a href="{{ site.stackoverflow_link }}" target="_blank">
+          <i class="fa fa-stack-overflow"></i>Stack Overflow
+        </a>
+      </li>
+    {% endif %}
+
+    {% if site.twitter_username %}
+      <li>
+        <a href="http://www.twitter.com/{{ site.twitter_username }}" target="_blank">
+          <i class="fa fa-twitter"></i>Twitter
+        </a>
+      </li>
+    {% endif %}
+
+    {% if site.linkedin_link %}
+      <li>
+        <a href="{{ site.linkedin_link }}" target="_blank">
+          <i class="fa fa-linkedin"></i>LinkedIn
+        </a>
+      </li>
+    {% endif %}
+
+    {% if site.google_plus_link %}
+      <li>
+        <a href="{{ site.google_plus_link }}" target="_blank">
+          <i class="fa fa-google-plus"></i>Google+
+        </a>
+      </li>
+    {% endif %}
+
+    {% if false %}
+    <li>
+      <a href="{{ site.baseurl }}/feed.xml" target="_blank">
+        <i class="fa fa-rss"></i>Blog Feed
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
