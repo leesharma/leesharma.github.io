@@ -23,8 +23,6 @@ codepen_link: http://codepen.io/leesharma/
 footer: # "This site has a footer. &hearts;"
 
 # Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+markdown: kramdown
 permalink: pretty
 exclude: [vendor]
