@@ -5,15 +5,11 @@
 
     <body>
 
-    {% if site.posts.size > 0 %}
-      {% include header.html %}
-    {% endif %}
+    {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrap">
+    <main>
       {{ content }}
-      </div>
-    </div>
+    </main>
 
     {% include footer.html %}
 

@@ -2,51 +2,20 @@
 layout: default
 ---
 
+<section class="intro" id="intro">
+  <h1>Welcome</h1>
 
-<div class="container-fluid index">
-    <div class="row">
+  <p>
+    Hello, my name is <em>Lee Sharma</em>.
+  </p>
 
-        <div class="col-md-12 main content-panel">
+  <p>
+    I am a developer, student, runner, reader, traveller, and generally awesome
+    person. If you want to talk about software or just say hi, you can contact
+    me using one of the social media links below.
+  </p>
 
-            <div class="gravatar">
-                <img src="{{ site.title_image }}" class="img-circle about-image" height="150" width="150" alt="{{ site.title }}" />
-            </div>
-
-            <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
-
-            <div class="author-text">
-                {{ site.title_description }}
-            </div>
-
-            {% include social_links.html %}
-          </div>
-
-
-	  {% if site.posts.size > 0 %}
-
-            <div class="col-md-12 main content-panel">
-	      <div class="articles">
-
-		<h2>Latest Articles</h2>
-
-		<ul>
-                    {% for post in site.posts | limit: site.post_limit %}
-
-                        <li>
-                            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                            <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
-                        </li>
-
-                    {% endfor %}
-                    <li>
-                        <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
-                    </li>
-                </ul>
-
-	      </div>
-            </div>
-
-	  {% endif %}
-
-    </div>
-</div>
+  <div id="contact-list">
+    <h2>Find me online</h2> {% include social_links.html %}
+  </div>
+</section>

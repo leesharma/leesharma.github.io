@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+
+<section class="all-posts">
+  {% if site.posts.size == 0 %}
+  <p class="flow-text">Sorry, there are no posts yet. Go back to
+  <a href="{{ site.url }}">the homepage</a>.</p>
+  {% endif %}
+
+  {% for post in site.posts %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+    {% if forloop.first %}
+      <h1 id="{{ this_year }}-header" class="year-header">{{ this_year }}</h1>
+      <dl id="{{ this_year }}-posts" class="posts">
+    {% endif %}
+
+        <dt>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <span class="date">published {{ post.date | date_to_string }}</span>
+        </dt>
+        <dd class="category">{{ post.categories }}</dd>
+        <dd class="tags"><i class="fa fa-tags"> {{ post.tags | join: ', ' }}</i></dd>
+        <dd class="excerpt">{{ post.excerpt }}</dd>
+
+    {% if forloop.last %}
+      </dl>
+
+    {% else %}
+      {% if this_year != next_year %}
+      </dl>
+
+      <h1 id="{{ next_year }}-header" class="year-header">{{ next_year }}</h1>
+      <dl id="{{ next_year }}-posts" class="posts">
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  </dl>
+</section>

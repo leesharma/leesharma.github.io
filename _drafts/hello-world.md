@@ -1,7 +1,6 @@
 ---
 layout:     post
 title:      Hello, World!
-date:       August 17, 2015 12:00
 author:     Lee Sharma
 summary:    This is the first post in my new blog
 categories: watercooler

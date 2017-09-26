@@ -2,22 +2,19 @@
 layout: default
 ---
 
-<div class="container-fluid index">
-  <div class="row index all-posts">
+<section>
+  <h1>Search</h1>
 
-    <h1 class="header author-header">Search</h1>
-
-    <div id="search-container">
-      <input type="text" id="search-input" placeholder="Type here...">
-      <div class="col-md-12 content-panel articles">
-        <ul id="results-container"><small>Start typing to see some results</small></ul>
-      </div>
-    </div>
-
+  <div class="search">
+    <input type="text" id="search-input" placeholder="Type here...">
   </div>
-</div>
 
-<hr class="search-hr" />
+  <dl class="search-results posts" id="results-container">
+    <dt>Start typing to see some results</dt>
+  </dl>
+</section>
+
+
 
 <script src="{{ site.baseurl }}/js/jekyll-search.js" type="text/javascript"></script>
 
@@ -26,7 +23,12 @@ layout: default
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
     dataSource: '{{ site.baseurl }}/search.json',
-    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}<\/a><\/li>',
+    searchResultTemplate:
+      '<dt class="post-title">' +
+        '<a href="{url}" title="{desc}">{title}<\/a>' +
+        '<span class="date"> published {date}</span><\/dt>' +
+      '<dd class="category">{category}</dd>' +
+      '<dd class="tags"><i class="fa fa-tags"> {tags}</i></dd>',
     noResultsText: 'No results found',
     limit: 10,
     fuzzy: true,
