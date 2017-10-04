@@ -23,6 +23,7 @@ $xs: 450px !default;
 $small-screen: 600px !default;
 $medium-screen: 992px !default;
 $large-screen: 1200px !default;
+$xl: 1400px !default;
 
 $sm-h-margin: 1.5em; $sm-v-margin: 1.5em;
 
@@ -34,6 +35,10 @@ $interval-size: $range / $intervals !default;
 html, body {
   height: 100%;
   background-color: $background;
+}
+body {
+  max-width: $xl;
+  margin-left: auto; margin-right: auto;
 }
 
 .clear { clear: both; }
@@ -281,6 +286,25 @@ dl.search-results {
   dt {
     margin-top: 1em;
     &:first-of-type { margin-top: 2em; }
+  }
+}
+/* Profile */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile-picture {
+  // fallback (for small screens)
+  @extend .center-block;
+  border-radius: 5px;
+  max-width: 250px;
+
+  // special screen sizes
+  @media only screen and (min-width: $small-screen) { max-width: 400px; }
+  @media only screen and (min-width: $large-screen) {
+    float: right;
+    padding-left: 1em;
   }
 }
 
