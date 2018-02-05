@@ -239,7 +239,7 @@ a {
   &:hover { text-decoration: underline; }
 }
 
-#contact-list {
+#contact-list, #meetup-list {
   @extend .squeeze-top;
   h2  { @extend .inline; }
   nav { @extend .inline; }
