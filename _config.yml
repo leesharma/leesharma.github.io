@@ -13,6 +13,7 @@ post_limit: 5
 
 # Social usernames/URLs
 #twitter_username: theleesharma
+# google_scholar_link:
 github_username:  leesharma
 # linkedin_link:
 # google_plus_link:
@@ -20,7 +21,7 @@ github_username:  leesharma
 codepen_link: http://codepen.io/leesharma/
 
 # Footer
-footer: # "This site has a footer. &hearts;"
+footer: #"This site has a footer. &hearts;"
 
 # Build settings
 markdown: kramdown

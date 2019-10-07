@@ -1,5 +1,13 @@
 <nav>
   <ul>
+    {% if site.google_scholar_link %}
+      <li>
+        <a href="#" target="_blank">
+          <i class="fa fa-graduation-cap"></i>Google Scholar
+        </a>
+      </li>
+    {% endif %}
+
     {% if site.github_username %}
       <li>
         <a href="https://github.com/{{ site.github_username }}" target="_blank">

@@ -5,7 +5,7 @@
 $background: #FFF;
 $background-secondary: #F2EFF4;
 $primary:   #FDFFC1;
-$secondary: #AAA1B2;
+$secondary: royalblue;//#AAA1B2;
 
 $serif: Ovo, serif;
 $sans-serif: Muli, sans-serif;
@@ -57,7 +57,9 @@ header {
   margin:    $v-margin $h-margin;
   h1 {
     margin:      0;
+    margin-left: 0.5em;
     font-size:   1.2em;
+    font-family: $serif;
     height:      $navbar-height;
     line-height: $navbar-height;
     display:     inline-block;
@@ -113,7 +115,7 @@ header {
 /* Typography */
 body {
   font: 18px/1.2em $sans-serif;
-  max-width: 1080px;
+  max-width: $large-screen;
 }
 header {
   a {
@@ -221,6 +223,7 @@ section.intro {
   em {
     font-style: normal;
     color: $secondary;
+    font-weight: 800;
   }
 }
 
