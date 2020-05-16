@@ -1,0 +1,15 @@
+---
+layout: archive
+title: "Talks and presentations"
+permalink: /talks/
+author_profile: true
+---
+
+This list includes conference talks, poster presentations, and demos.
+{% if site.talkmap_link == true %}
+<span style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></span>
+{% endif %}
+
+{% for post in site.talks reversed %}
+  {% include archive-single-talk.html %}
+{% endfor %}
